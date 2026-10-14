@@ -10,14 +10,9 @@ UPDATE REGLA_LLD.dbo.tblM_Form
  
 
 
- UPDATE Regla_Common.dbo.tblm_Screen
-SET Url = '~/UI/LLD/Tools/DataValidation.aspx', PageAuthUrl = '/UI/LLD/Tools/DataValidation.aspx'
-WHERE ScreenID = 'DATA_VALIDATION_LLD'
-
 UPDATE Regla_LLD.dbo.tblM_Form SET delete_flag=1 
 WHERE application_id like '%LLD%' AND Form_Code IN ('LLD_DHI_DPI_EXPORT','LLD_DHI_DPI_IMPORT')
 
-SELECT * FROM Regla_LLD.dbo.tblM_Form WHERE application_id like '%LLD%' AND Form_Code IN ('LLD_DHI_DPI_EXPORT','LLD_DHI_DPI_IMPORT')
 
 ALTER TABLE REGLA_LLD.dbo.LLD_DHI_DPI
 ALTER COLUMN NOMOR_REKENING varchar(30);
